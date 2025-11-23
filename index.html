@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio  | Laras Intan Wahyuni</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            gold: '#d4af37', // Warna Emas Klasik
+                            goldLight: '#f3e5ab',
+                            gray: '#2a2a2a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom CSS untuk efek tambahan */
+        body {
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+        
+        /* Efek Teks Emas Berkilau */
+        .text-gradient-gold {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Efek Glassmorphism (Kaca) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-luxury-gold selection:text-luxury-black">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 p-6" id="navbar">
+        <div class="max-w-6xl mx-auto flex justify-between items-center backdrop-blur-md bg-luxury-black/70 rounded-full px-6 py-3 border border-white/10">
+            <a href="#" class="font-serif text-xl font-bold text-luxury-gold tracking-widest">Laras Intan W.</a>
+            <div class="hidden md:flex space-x-8 text-sm tracking-wider font-light">
+                <a href="#about" class="hover:text-luxury-gold transition-colors">TENTANG</a>
+                <a href="#experience" class="hover:text-luxury-gold transition-colors">RIWAYAT PENDIDIKAN</a>
+                <a href="#skills" class="hover:text-luxury-gold transition-colors">KEAHLIAN</a>
+                <a href="kontak.html" class="hover:text-luxury-gold transition-colors">KONTAK</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-luxury-gold/10 rounded-full blur-[120px]"></div>
+        
+        <div class="text-center z-10 px-4">
+            <p class="text-luxury-gold tracking-[0.3em] text-sm mb-4 uppercase" data-aos="fade-down">Portofolio</p>
+            <h1 class="font-serif text-6xl md:text-8xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                Halo, Saya <br>
+                <span class="text-gradient-gold">Laras</span>
+            </h1>
+            <p class="text-gray-400 max-w-xl mx-auto text-lg font-light mb-10" data-aos="fade-up" data-aos-delay="400">
+                Saya adalah mahasiswa semester 5 prodi Pendidikan Teknologi Informasi, Universitas Muhammadiyah Palangkaraya. 
+            <div data-aos="fade-up" data-aos-delay="600">
+                <a href="kontak.html" class="px-8 py-3 border border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 uppercase tracking-widest text-sm font-semibold">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="aspect-[3/4] bg-gray-800 rounded-sm overflow-hidden relative border border-white/10 group">
+                        <img src="aku cv.jpg" 
+                             alt="Profile" 
+                             class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700">
+                        
+                        <div class="absolute inset-4 border border-luxury-gold/30 z-10"></div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="font-serif text-4xl text-white mb-6">Tentang <span class="text-luxury-gold italic">Saya</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6 font-light">
+                        Cita-cita saya setelah lulus kuliah adalah ingin menjadi Tenaga Pendidik. Harapan saya selama kuliah ini adalah mencari dan menggali ilmu yg akan menjadi bekal saya di masa depan. Motto hidup saya "Hidup itu proses, nikmati perjalanan sambil terus berkembang." 
+                    <p class="text-gray-400 leading-relaxed mb-8 font-light">
+                        Kegiatan saya sekarang tidak hanya sedang berkuliah, namun saya juga sambil bekerja sebagai Juru Masak.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-luxury-dark relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-serif text-4xl text-white">Riwayat <span class="text-luxury-gold italic">Pendidikan</span></h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-sm relative" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold text-white">Universitas Muhammadiyah Palangkaraya</h3>
+                        <span class="text-luxury-gold text-sm font-mono mt-2 md:mt-0">2023 - Sekarang</span>
+                    </div>
+                    <h4 class="text-gray-400 text-sm uppercase tracking-wider mb-4">Pendidikan Teknologi Informasi</h4>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold text-white">SMA Negeri 5 Palangkaraya</h3>
+                        <span class="text-luxury-gold text-sm font-mono mt-2 md:mt-0">2019 - 2021</span>
+                    </div>
+                    <h4 class="text-gray-400 text-sm uppercase tracking-wider mb-4">MIPA</h4>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm relative border-l-4 border-l-luxury-gold" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold text-white">SMP Negeri 1 Palangkaraya</h3>
+                        <span class="text-luxury-gold text-sm font-mono mt-2 md:mt-0">2016 - 2018</span>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-serif text-4xl text-white mb-12" data-aos="fade-up">Keahlian & <span class="text-luxury-gold italic">Teknologi</span></h2>
+            
+            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <span class="px-6 py-3 border border-white/20 rounded-full text-sm hover:border-luxury-gold hover:text-luxury-gold transition-colors cursor-default">Project Management</span>
+                <span class="px-6 py-3 border border-white/20 rounded-full text-sm hover:border-luxury-gold hover:text-luxury-gold transition-colors cursor-default">Organization</span>
+                <span class="px-6 py-3 border border-white/20 rounded-full text-sm hover:border-luxury-gold hover:text-luxury-gold transition-colors cursor-default">Team Player</span>
+                <span class="px-6 py-3 border border-white/20 rounded-full text-sm hover:border-luxury-gold hover:text-luxury-gold transition-colors cursor-default">Digital Marketing</span>
+                <span class="px-6 py-3 border border-white/20 rounded-full text-sm hover:border-luxury-gold hover:text-luxury-gold transition-colors cursor-default">Public Speaking</span>
+                <span class="px-6 py-3 border border-white/20 rounded-full text-sm hover:border-luxury-gold hover:text-luxury-gold transition-colors cursor-default">Cooking</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 border-t border-white/5 bg-black">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="font-serif text-3xl text-white mb-8">Mari Bekerja <span class="text-luxury-gold italic">Sama</span></h2>
+            <p class="text-gray-500 mb-10 max-w-md mx-auto">Tertarik untuk berkolaborasi atau memiliki pertanyaan? Kirimkan email kepada saya.</p>
+            
+            <a href="kontak.html" class="inline-block bg-luxury-gold text-black px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-white transition-colors duration-300">
+                Kirim Email
+            </a>
+
+            <div class="mt-16 flex justify-center space-x-8 text-gray-500">
+                <a href="#" class="hover:text-luxury-gold transition-colors">WhatsApp</a>
+                <a href="https://www.instagram.com/larasii__?igsh=MXY0OHNvMHl4NjFpZg%3D%3D&utm_source=qr " class="hover:text-luxury-gold transition-colors">Instagram</a>
+                <a href="#" class="hover:text-luxury-gold transition-colors">Facebook</a>
+            </div>
+
+            <div class="mt-16 text-xs text-gray-700">
+                Copyright &copy; 2025 Laras Intan Wahyuni.
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi Animasi
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Efek Navbar Transparan ke Solid saat Scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('p-6');
+            } else {
+                navbar.classList.add('p-6');
+                navbar.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
